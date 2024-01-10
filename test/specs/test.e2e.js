@@ -1,12 +1,13 @@
-const { isAwaitKeyword } = require("typescript")
+const landingPage = require("../../pages/landing_page")
 
 describe('MVP', () => {
 
     it('login to the app', async () => {
 
-        await $('android.widget.Button').click()
-        await $('//android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]').click()
-        await $('//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[3]/android.view.View/android.widget.Button').click()
+        await landingPage.agreeBtn.click()
+        // await $('android.widget.Button').click()
+        await landingPage.allowPermissionBtn.click()
+        await $('//androidx.compose.ui.platform.l1/android.view.View/android.view.View/android.view.View[3]/android.widget.Button').click()
         await $('android.widget.EditText').addValue('3028111111')
         await $('//android.widget.Button[@resource-id="com.plamfy.platform:id/btnContinue"]').click()
         await $('[resource-id="android:id/button1"]').click()
