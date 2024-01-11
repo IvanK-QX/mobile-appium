@@ -2,14 +2,14 @@ const landingPage = require("../../pages/landing_page")
 const loginPage = require("../../pages/login_page")
 const mainPage = require("../../pages/main_page")
 const preStreamPage = require("../../pages/prestream_page")
-
+const app = require("../../pages/app")
 describe('MVP', () => {
 
     it('login to the app', async () => {
-
-        await landingPage.agreeBtn.click()
-        await landingPage.allowPermissionBtn.click()
-        await landingPage.phoneIcon.click()
+        await app.landingPage.agreePermissions()
+        // await landingPage.agreeBtn.click()
+        // await landingPage.allowPermissionBtn.click()
+        // await landingPage.phoneIcon.click()
         await loginPage.phoneNumberField.addValue('3028111111')
         await loginPage.continieBtn.click()
         await loginPage.confirmeNumber.click()
