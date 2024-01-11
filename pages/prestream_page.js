@@ -2,6 +2,7 @@ const PreStreamPage = {
 
     async allowPermission() {
         await $('android.widget.Button').click()
+        await driver.pause(500)
         await $('android.widget.Button').click()
     },
 
@@ -9,9 +10,11 @@ const PreStreamPage = {
         return $('[text="While using the app"]')
     },
 
-    async allowPermissions() {
-        await $('[text="While using the app"]').click()
-    },
+    // async allowPermission() {
+    //     await $('[text="While using the app"]').click()
+    //     await driver.pause(500)
+    //     await $('[text="While using the app"]').click()
+    // },
 
     async agreeWithTos() {
         await $('android.widget.CheckBox').click()
