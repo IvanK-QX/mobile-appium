@@ -1,4 +1,6 @@
 class LandingPage {
+
+
     get agreeBtn () {
         return $('android.widget.Button')
     }
@@ -12,5 +14,6 @@ class LandingPage {
     }
 
 }
+
 
 module.exports = new LandingPage()
