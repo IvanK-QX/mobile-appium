@@ -1,13 +1,13 @@
-class MainPage {
+const MainPage = {
 
     get startStreamBtn() {
         return $('android.widget.Button')
-    }
+    },
 
     async clickStartStream() {
         await $('android.widget.Button').click()
         await $('android.widget.Button').click()
-    }
+    },
 
     //add profile 
         // const name = `APPIUM${Math.floor(Math.random() * (999999 - 100000) + 100000)}`
@@ -22,4 +22,4 @@ class MainPage {
 
 }
 
-module.exports = new MainPage()
+module.exports = MainPage
