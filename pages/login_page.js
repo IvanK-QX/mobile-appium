@@ -20,6 +20,9 @@ const LoginPage = {
     async inputeCode() {
         await driver.pause(1000)
         await driver.touchAction([ { action: 'tap', x: 540, y: 738} ])
+        // await $('[resource-id="om.plamfy.platform:id/sms_code_input"]').addValue('111111')
+
+        await driver.touchAction([ { action: 'tap', x: 540, y: 738} ])
         await driver.touchAction([ { action: 'tap', x: 153, y: 1728} ])
         await driver.touchAction([ { action: 'tap', x: 153, y: 1728} ])
         await driver.touchAction([ { action: 'tap', x: 153, y: 1728} ])

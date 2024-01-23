@@ -22,7 +22,8 @@ const PreStreamPage = {
     },
 
     async changeStreamTitle() {
-        await $('//android.widget.EditText/android.view.View').click()
+        await $('[text="Stream Title"]').click()
+
         await driver.pause(500)
         await driver.touchAction([ { action: 'tap', x: 969, y: 1860} ])
         await driver.touchAction([ { action: 'tap', x: 95, y: 1876} ])
